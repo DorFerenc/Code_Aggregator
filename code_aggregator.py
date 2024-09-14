@@ -13,7 +13,12 @@ def should_ignore(path, ignore_patterns):
 def read_gitignore(project_path):
     """Read .gitignore file and return a list of patterns to ignore."""
     gitignore_path = os.path.join(project_path, '.gitignore')
-    ignore_patterns = []
+    ignore_patterns = [
+        'venv', 'venv/*', '.venv', '.venv/*',  # Virtual environment
+        '.idea', '.idea/*',  # PyCharm files
+        '*cache*', '*.pyc', '__pycache__', '*.class', '*.o',
+        '.git', '.gitignore', '*.exe'  # Common ignore patterns
+    ]
     if os.path.exists(gitignore_path):
         with open(gitignore_path, 'r') as gitignore_file:
             for line in gitignore_file:
@@ -52,7 +57,6 @@ def aggregate_code(project_path, output_file):
     docker_files = ['Dockerfile', '.dockerignore', 'docker-compose.yml', 'docker-compose.yaml']
 
     ignore_patterns = read_gitignore(project_path)
-    ignore_patterns.extend(['*cache*', '*.pyc', '__pycache__', '*.class', '*.o', '.git', '.gitignore', '*.exe'])  # Common ignore patterns
 
     file_counter = Counter()
     total_files = 0
