@@ -9,18 +9,18 @@ Easily compile your entire project into a single, AI-friendly file!
 git clone https://github.com/yourusername/code-aggregator.git
 cd code-aggregator
 
-# Run the basic aggregation script
-python code_aggregator.py
-
-# OR run the exclusion-based aggregation script
-python code_aggregator_excluder.py
-
-# Enter your project path when prompted
-Enter the path to your project: /path/to/your/project
-
-# Output will be generated in the current directory
-Code aggregation complete. Output written to: /path/to/code-aggregator/aggregated_code_20240914_153010.txt
+# Run the main aggregator script
+python main_code_aggregator.py
 ```
+
+## Aggregation Modes 🏗️
+
+When you run `main_code_aggregator.py`, you'll be prompted to choose an aggregation mode:
+
+1. **Standard Aggregation** (`code_aggregator.py`): Compiles all code files in the project into a single output file.
+2. **Excluder Mode** (`code_aggregator_excluder.py`): Allows you to exclude specific files before aggregation.
+3. **Includer Mode** (`code_aggregator_includer.py`): Lets you select only specific files to be included in the aggregation.
+4. **Depth-based Aggregation** (`code_aggregator_by_depth.py`): Aggregates files up to a specified depth in the directory tree.
 
 ## Output Example 📄
 
@@ -69,21 +69,6 @@ Files by type:
   .md: 1
 ```
 
-## Description 📝
-
-Code Aggregator is a Python script that compiles all the code files from a project into a single output file. It's perfect for:
-
-- Sharing your entire project with AI language models 🤖
-- Quick code reviews 👀
-- Project structure analysis 🏗️
-- Debugging assistance 🐛
-
-Now featuring two modes:
-
-1. Standard Aggregator (`code_aggregator.py`): This script compiles your project in one go, creating a complete output with no exclusions.
-2. Excluder Aggregator (`code_aggregator_excluder.py`): Preview your project structure and select files to exclude before generating the final output.
-
-
 ## Features ✨
 
 - 🌳 Generates a visual project structure
@@ -93,7 +78,7 @@ Now featuring two modes:
 - 🚫 Respects .gitignore rules
 - 🕰️ Includes timestamp for tracking
 - 📊 Provides a summary of processed files
-- 🗂️ Option to exclude specific files before aggregation
+- 🗂️ Multiple aggregation modes for full control over included content
 
 ## Requirements 🛠️
 
@@ -115,17 +100,13 @@ Now featuring two modes:
 1. Open your terminal
 2. Navigate to the script's directory
 3. Run:
-* To aggregate the whole project, run:
    ```
-   python code_aggregator.py
+   python main_code_aggregator.py
    ```
-* To exclude files from the final output, run:
-   ```
-   python code_aggregator_excluder.py
-   ```
-4. Enter your project's path when prompted
-5. If you run the `excluder`, you'll be shown a list of files to exclude from the final aggregation.
-6. Find the output file in the same directory as the script
+4. Select an aggregation mode when prompted
+5. Enter your project's path when asked
+6. If using `excluder` or `includer` modes, select files accordingly
+7. Find the output file in the same directory as the script
 
 ## Customization 🛠️
 
