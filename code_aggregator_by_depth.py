@@ -56,7 +56,7 @@ def generate_project_structure(project_path, ignore_patterns, max_depth):
 def aggregate_code(project_path, output_file, max_depth):
     code_extensions = [
         '.py', '.js', '.html', '.css', '.java', '.cpp', '.h', '.c', '.go', '.rs',
-        '.yml', '.yaml', '.json', '.xml', '.md', '.txt'
+        '.yml', '.yaml', '.json', '.xml', '.md', '.txt', '.dart', '.kt', '.swift', '.php', '.java', '.rb'
     ]
     docker_files = ['Dockerfile', '.dockerignore', 'docker-compose.yml', 'docker-compose.yaml']
 

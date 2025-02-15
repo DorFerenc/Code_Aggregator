@@ -52,7 +52,7 @@ def aggregate_code(project_path, output_file):
     # Define the file extensions and names we want to include
     code_extensions = [
         '.py', '.js', '.html', '.css', '.java', '.cpp', '.h', '.c', '.go', '.rs',
-        '.yml', '.yaml', '.json', '.xml', '.md', '.txt'  # Configuration and documentation files
+        '.yml', '.yaml', '.json', '.xml', '.md', '.txt', '.dart', '.kt', '.swift', '.php', '.java', '.rb'
     ]
     docker_files = ['Dockerfile', '.dockerignore', 'docker-compose.yml', 'docker-compose.yaml']
 

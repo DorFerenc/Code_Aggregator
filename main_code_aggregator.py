@@ -15,10 +15,11 @@ def main():
         print("Invalid choice. Please restart and select a valid option.")
         return
 
-    project_path = input("Enter the path to your project [without quotes]: ").strip('"')
-    if not os.path.isdir(project_path):
-        print("Invalid project path. Please restart and enter a valid directory path.")
-        return
+    # project_path = input("Enter the path to your project [without quotes]: ").strip('"')
+    # if not os.path.isdir(project_path):
+    #     print("Invalid project path. Please restart and enter a valid directory path.")
+    #     return
+    project_path = ""
 
     if choice == '1':
         subprocess.run(["python", "code_aggregator.py", project_path])

@@ -54,7 +54,7 @@ def aggregate_code(project_path, output_file, include_list):
     """Aggregate code and write it to the output file, including only files in the include_list."""
     code_extensions = [
         '.py', '.js', '.html', '.css', '.java', '.cpp', '.h', '.c', '.go', '.rs',
-        '.yml', '.yaml', '.json', '.xml', '.md', '.txt'
+        '.yml', '.yaml', '.json', '.xml', '.md', '.txt', '.dart', '.kt', '.swift', '.php', '.java', '.rb'
     ]
     docker_files = ['Dockerfile', '.dockerignore', 'docker-compose.yml', 'docker-compose.yaml']
 
